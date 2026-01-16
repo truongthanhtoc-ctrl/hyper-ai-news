@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RefreshCw, Zap, ExternalLink, Activity, Radio, Sparkles } from 'lucide-react';
@@ -177,8 +178,8 @@ function NewsCard({ item, index }: { item: NewsItem; index: number }) {
       whileTap={{ scale: 0.98 }}
       className="group"
     >
-      <a
-        href={item.url}
+      <Link
+        href={`/view?url=${encodeURIComponent(item.url)}&title=${encodeURIComponent(item.title)}`}
         className="block bg-white rounded-[20px] p-5 shadow-[0_2px_8px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-indigo-200 hover:shadow-[0_8px_24px_rgb(79,70,229,0.12)] transition-all duration-300 relative overflow-hidden"
       >
         <div className="flex items-center justify-between mb-3">
@@ -203,7 +204,7 @@ function NewsCard({ item, index }: { item: NewsItem; index: number }) {
 
         {/* Subtle Shine Effect on Hover */}
         <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 pointer-events-none" />
-      </a>
+      </Link>
     </motion.article>
   );
 }
