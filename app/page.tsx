@@ -179,8 +179,6 @@ function NewsCard({ item, index }: { item: NewsItem; index: number }) {
     >
       <a
         href={item.url}
-        target="_blank"
-        rel="noopener noreferrer"
         className="block bg-white rounded-[20px] p-5 shadow-[0_2px_8px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-indigo-200 hover:shadow-[0_8px_24px_rgb(79,70,229,0.12)] transition-all duration-300 relative overflow-hidden"
       >
         <div className="flex items-center justify-between mb-3">
