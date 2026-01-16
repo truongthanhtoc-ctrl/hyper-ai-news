@@ -3,7 +3,7 @@
   "short_name": "Hyper AI",
   "description": "Real-time AI product news aggregator covering global tech releases from top Chinese media.",
   "start_url": "/",
-  "display": "standalone",
+  "display": "minimal-ui",
   "background_color": "#f3f4f6",
   "theme_color": "#ffffff",
   "orientation": "portrait",
